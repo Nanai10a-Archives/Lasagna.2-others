@@ -1,0 +1,19 @@
+[package]
+name = "virtual_lasagna_schema_convert_from_old_schema"
+description = """
+virtual_Lasagna schema converter. (old -> new)
+
+if need more info, see "main.rs".
+"""
+version = "1.0.0"
+edition = "2018"
+
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"
+
+[dependencies]
+serde = { version = "*", features = ["derive"] }
+toml = "*"
+chrono = "*"
