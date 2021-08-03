@@ -1,0 +1,30 @@
+[package]
+name = "virtual_lasagna_cli"
+description = "not ask anythings... not look me."
+version = "0.1.0"
+edition = "2018"
+
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"
+
+[dependencies.serde]
+version = "*"
+features = ["derive"]
+
+[dependencies.smallvec]
+version = "*"
+features = ["serde"]
+
+[dependencies.toml]
+version = "*"
+
+[dependencies.chrono]
+version ="*"
+
+[dependencies.anyhow]
+version ="*"
+
+[dependencies.lazy_static]
+version ="*"
